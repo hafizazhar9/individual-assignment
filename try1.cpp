@@ -61,11 +61,11 @@ int main(void)
 	
 	if(pid > 0) 
 	{
-      wait(NULL); // waiting for child to finish
+      wait(NULL); 
  
-      close(pipefds[1]); // close write fd
-      read(pipefds[0], buffer, ID_LENGTH + 1); // read PIN from pipe
-      close(pipefds[0]); // close read fd
+      close(pipefds[1]); 
+      read(pipefds[0], buffer, ID_LENGTH + 1); 
+      close(pipefds[0]); 
       printf("%s\n\n", buffer);
     }
 }
